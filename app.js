@@ -13,10 +13,6 @@ const db = require('./DB/ConnectToDb.js');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Set environment variable to detect Render deployment
-if (process.env.RENDER === 'true') {
-  process.env.IS_RENDER = true;
-}
 
 
 app.get('/', (req, res) => {
